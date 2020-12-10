@@ -1,0 +1,14 @@
+
+.grid {
+    display: grid;
+    grid-template-columns: 75px 10fr;
+    grid-template-rows: 80px auto;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+}
+
+.top-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
