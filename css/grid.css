@@ -1,4 +1,4 @@
-
+/* Page Grid*/
 .grid {
     display: grid;
     grid-template-columns: 75px 10fr;
@@ -11,4 +11,18 @@
 .top-header {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+/* Header */
+
+.top-header {
+    display: grid;
+    grid-template-columns: 5fr auto 1fr;
+    grid-template-rows: auto;
+} 
+/* Dash Search Row */
+
+.dash-search {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }

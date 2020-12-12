@@ -15,7 +15,7 @@
         <div class="grid">
         <!--Header with app name, notification icon badge, and profile avatar and name.-->
         <header class="top-header">
-            <div class="header-items">
+
                 <h1>DataViz</h1>
                 <!--Notification Icon-->
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -35,7 +35,7 @@
                     <img src="web_app_dashboard_v3.1/images/rsz_profpicedit.jpg" alt="profile picture" class="profile-pic"/>
                     <p>CJ Kannawin</p>
                 </div>
-            </div>   
+             
         </header>
 
         <!--SVG icon based navigation with the following links: Dashboard, Members, Visits, and Settings. -->
@@ -43,7 +43,7 @@
             <nav>
                 <!--Dash Icon-->
                 <svg version="1.1" id="Line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    height=15 width=15 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                    height=35 width=35 viewBox="0 0 32 32"viewBox="0 0 25 25" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
                         .st0{fill:#FFFFFF;}
                     </style>
@@ -61,7 +61,7 @@
                 </svg>
                 <!--Members Icon-->
                 <svg version="1.1" id="Line_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    height=15 width=15 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                    height=40 width=40 viewBox="0 0 32 32"viewBox="0 0 25 25" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
                         .st0{fill:#FFFFFF;}
                     </style>
@@ -79,7 +79,7 @@
                 </svg>
                 <!--Visits Icon-->
                 <svg version="1.1" id="Line_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    height=15 width=15 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                    height=35 width=35 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
                         .st0{fill:#FFFFFF;}
                     </style>
@@ -95,7 +95,7 @@
                 </svg>
                 <!--Settings Icon-->
                 <svg version="1.1" id="Line_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    height=15 width=15 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
+                    height=35 width=35 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
                     <style type="text/css">
                         .st0{fill:#FFFFFF;}
                     </style>
@@ -113,15 +113,177 @@
                         </g>
                     </g>
                 </svg>
-              
             </nav>
         </div> 
 
         <!--Main content area where the specific dashboard widgets will go.-->
-        <div class="main-content">
-            <p>This is the main content</p>
-        </div>
+        <main>
+            <section class="dash-topline">
+                <div class="dash-search"> <!--Dashboard Title & Search-->
+                    <h2>Dashboard</h2>
+
+                    <div class="dash-search-wrapper">
+                        <input type="search" placeholder="Search" class="dash-search-area"/>
+                        <img src="web_app_dashboard_v3.1/icons/icon-mag-glass.svg" alt="search glass" class="search-glass"/>
+                    </div>
+                </div>
+
+                <div class="alert-banner"> <!--Alert Banner, JS to remove-->
+                    <P><Strong>Alert:</Strong>You have unread notifications. Check your bell to see what is waiting!</P>
+                    <button>X</button>
+                </div>
+            </section>
+
+            <section class="traffic">
+                <h3>Traffic</h3>
+
+                <ul class="traffic-list">
+                    <li>Hourly</li>
+                    <li>Daily</li>
+                    <li>Weekly</li>
+                    <li>Monthly</li>
+                </ul>
+
+                <div class="chart-container">
+                    <canvas id="line-chart"></canvas>
+                </div>
+            </section>
+
+            <section class="two-columns">
+                <div>
+                    <h3>Daily Traffic Averages</h3>
+                    <canvas id="bar-chart"></canvas>
+                </div>
+                <div>
+                    <h3>Mobile Users</h3>
+                     <canvas id="donut-chart"></canvas>
+                </div>
+            </section>
+
+            <section>
+                <h3>Social Stats</h3>
+                <div class="social-wrap">
+                    <img src="web_app_dashboard_v3.1/icons/icon-twitter.svg" alt="twitter icon" class="social-icon">
+                    <p>Twitter</p>
+                    <p>10,345</p>
+                </div>
+
+                <div class="social-wrap">
+                    <img src="web_app_dashboard_v3.1/icons/icon-facebook.svg" alt="facebook icon" class="social-icon">
+                    <p>Facebook</p>
+                    <p>8,739</p>
+                </div>
+
+                <div class="social-wrap">
+                    <img src="web_app_dashboard_v3.1/icons/icon-google-plus.svg" alt="google plus icon" class="social-icon">
+                    <p>Google+</p>
+                    <p>2,530</p>
+                </div>
+            </section>
+            
+            <section class="two-columns">
+                <div>
+                    <h3>New Members</h3>
+
+                        <div class="members">
+                            <img src="web_app_dashboard_v3.1/images/member-1.jpg" alt="member-1">
+                            <p>Pamela Beasley</p>
+                            <a href="mailto:pbeasley@gmail.com">pbeasley@gmail.com</a>
+                        </div>
+                        <div class="members">
+                            <img src="web_app_dashboard_v3.1/images/member-2.jpg" alt="member-2">
+                            <p>Dwight Schrute</p>
+                            <a href="mailto:dschrute@gmail.com">dschrute@gmail.com</a>
+                        </div>
+                        <div class="members">
+                            <img src="web_app_dashboard_v3.1/images/member-3.jpg" alt="member-3">
+                            <p>Angela Martin</p>
+                            <a href="mailto:amartin@gmail.com">amartin@gmail.com</a>
+                        </div>
+                        <div class="members">
+                            <img src="web_app_dashboard_v3.1/images/member-4.jpg" alt="member-4">
+                            <p>Michael Scott</p>
+                            <a href="mailto:mscott@bing.com">pbeasley@bing.com</a>
+                        </div>
+                </div>
+
+                <div>
+                    <h3>Recent Activity</h3>
+                    
+                    <div class="activity">
+                        <img src="web_app_dashboard_v3.1/images/member-1.jpg" alt="member-1">
+                        <p><strong>Pamela Beasley</strong> Created a new event: Art Show at the College</p>
+                        <p>4 Hours Ago</p>
+                    </div>
+                    <div class="activity">
+                        <img src="web_app_dashboard_v3.1/images/member-2.jpg" alt="member-2">
+                        <p><strong>Dwight Schrute</strong> Liked the post "Everything to know about bears, beets, and Battlestar Galatica"</p>
+                        <p>5 Hours Ago</p>
+                    </div>
+                    <div class="activity">
+                        <img src="web_app_dashboard_v3.1/images/member-3.jpg" alt="member-3">
+                        <p><strong>Angela Marting</strong> Liked 134 photos from the album "Cats in costumes"</p>
+                        <p>6 Hours Ago</p>
+                    </div>
+                    <div class="activity">
+                        <img src="web_app_dashboard_v3.1/images/member-4.jpg" alt="member-4">
+                        <p><strong>Michael Scott</strong> Shared the article "Jokes too Inappropriate for the Workplace"</p>
+                        <p>1 Day Ago</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="two-columns">
+                <div>
+                    <h3>Message User</h3>
+
+                    <form>
+                        <input
+                            type="text"
+                            placeholder="Search for user"
+                            class="search-area"
+                            id="userField"
+                        />
+                       
+                        <textarea
+                            placeholder="Message for user"
+                            class="message-area"
+                            id="messageField"
+                        ></textarea>
+                        <button class="send-btn">Send</button>
+                </div>
+
+                <div>
+                    <h3>Settings</h3>
+                    <div>
+                        <p>Send Email Notification</p>
+
+                    </div>
+
+                    <div>
+                        <p>Set Profile to Public</p>
+
+                    </div>
+
+                    <select class="form=field" id="timezone">
+                        <option disabled selected>Select a Timezone</option>
+                        <option>Eastern</option>
+                        <option>Central</option>
+                        <option>Mountain</option>
+                        <option>Pacific</option>
+                    </select>
+
+                    <div class="settings-button">
+                        <button class="save-btn">Save</button>
+                        <button class="cancel-btn">Cancel</button>
+                    </div>
+                </div>
+            </section>
+
+            </main>
+        </main>
     </div>
-        <script src=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
     </body>
 </html>
