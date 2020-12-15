@@ -7,6 +7,9 @@ body {
     margin:0;
     background-color: slategray;
 }
+main {
+    background-color: white;
+}
 
 .top-header {
     width: 100%;
@@ -123,8 +126,51 @@ body {
     width: 15px;
 }
 
-main {
-    background-color: white;
+
+.alert-banner {
+    background-color: #004e4e;
+    margin: 25px auto;
+    width: 90%;
+    color: white;
+    border-radius: 6px;
+    max-width: 1200px;
+}
+
+.alert-banner p,
+.alert-banner button,
+.traffic h3,
+.traffic ul, 
+.traffic li {
+ display: inline-block;
+}
+.alert-banner p {
+    width: 95%;
+    padding-left: 10px;
+}
+.alert-banner button{
+  border: none;
+  color: white;
+  background-color: #004e4e;
+  font-size: large;
+  padding: 0;
+}
+
+.traffic-title {
+    width: 95%;
+    margin: 0 auto 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+.traffic-title h3 {
+    
+}
+.traffic-list {
+    list-style-type: none;
+    padding: 0;
+    margin-left: auto;
+}
+.traffic-list li {
+    margin: 10px;
 }
 
 .social-icon {
@@ -133,6 +179,7 @@ main {
 }
 
 .chart-container {
-    width: 90vw;
-    height: 90vw;
+    width: 95%;
+    margin: 0;
 }
+
