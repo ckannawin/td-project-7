@@ -173,13 +173,46 @@ main {
     margin: 10px;
 }
 
-.social-icon {
-    width: 15px;
-    height: 15px;
-}
-
-.chart-container {
-    width: 95%;
+.large-chart-container {
+    width: 90vw;
     margin: 0;
 }
+.chart-container {
+    width: 45vw;
+}
+.two-columns div {
+    border: lightgray 1px solid;
+}
+
+.social-wrap,
+.social-wrap img,
+.social-wrap div {
+    display: inline-block;
+}
+.social-wrap {
+    background-color: #F5F5F5;
+    border: lightgray 1px solid;
+    border-radius: 6px;
+    width: 25%;
+    margin: 0px 4% 25px;
+}
+.social-icon {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 99, 132, 1);
+    border-radius: 50%;
+    margin: 0 10px;
+}
+.social-count {
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+.social-title {
+    color: teal;
+    font-size: 1.1em;
+    margin: 10px 0 0;
+    font-weight: bold;
+}
+
 

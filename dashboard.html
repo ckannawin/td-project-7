@@ -146,18 +146,19 @@
                     </ul>
                 </div>
 
-                <div class="chart-container">
+                <div class="large-chart-container" style="position: relative;">
                     <canvas id="line-chart"></canvas>
                 </div>
             </section>
 
             <section class="two-columns">
-                <div>
-                    <h3>Daily Traffic Averages</h3>
+                <!-- <h3>Daily Traffic Averages</h3> -->
+                <div class="chart-container" style="position: relative;">
                     <canvas id="bar-chart"></canvas>
                 </div>
-                <div>
-                    <h3>Mobile Users</h3>
+
+                <!-- <h3>Mobile Users</h3> -->
+                <div class="chart-container" style="position: relative;">
                      <canvas id="donut-chart"></canvas>
                 </div>
             </section>
@@ -166,20 +167,26 @@
                 <h3>Social Stats</h3>
                 <div class="social-wrap">
                     <img src="web_app_dashboard_v3.1/icons/icon-twitter.svg" alt="twitter icon" class="social-icon">
-                    <p>Twitter</p>
-                    <p>10,345</p>
+                    <div>
+                        <p class="social-title">Twitter</p>
+                        <p class="social-count">10,345</p>
+                    </div>
                 </div>
 
                 <div class="social-wrap">
                     <img src="web_app_dashboard_v3.1/icons/icon-facebook.svg" alt="facebook icon" class="social-icon">
-                    <p>Facebook</p>
-                    <p>8,739</p>
+                    <div>
+                        <p class="social-title">Facebook</p>
+                        <p class="social-count">8,739</p>
+                    </div>
                 </div>
 
                 <div class="social-wrap">
                     <img src="web_app_dashboard_v3.1/icons/icon-google-plus.svg" alt="google plus icon" class="social-icon">
-                    <p>Google+</p>
-                    <p>2,530</p>
+                    <div>
+                        <p class="social-title">Google+</p>
+                        <p class="social-count">2,530</p>
+                    </div>
                 </div>
             </section>
             
