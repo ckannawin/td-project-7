@@ -173,15 +173,15 @@ main {
     margin: 10px;
 }
 
-.large-chart-container {
-    width: 90vw;
-    margin: 0 2% 0 2%;
+
+.widget-container-full {
+    padding: 1rem;
 }
-.chart-container {
-    width: 45vw;
-    margin: 5%;
+.widget-container-half {
+    padding: 1rem;
 }
-.two-columns div {
+.daily-bar,
+.mobile-donut {
     border: lightgray 1px solid;
 }
 
@@ -217,3 +217,5 @@ main {
 }
 
 
+@media screen and (min-width: 768px) {
+}

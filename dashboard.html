@@ -134,32 +134,36 @@
                 </div>
             </section>
 
-            <section class="traffic">
-                <div class="traffic-title">
-                    <h3>Traffic</h3>
+            <section class="widgets-grid">
 
-                    <ul class="traffic-list">
-                        <li>Hourly</li>
-                        <li>Daily</li>
-                        <li>Weekly</li>
-                        <li>Monthly</li>
-                    </ul>
+                <div class="traffic">
+                    <div class="traffic-title">
+                        <h3>Traffic</h3>
+
+                        <ul class="traffic-list">
+                            <li>Hourly</li>
+                            <li>Daily</li>
+                            <li>Weekly</li>
+                            <li>Monthly</li>
+                        </ul>
+                    </div>
+
+                    <div class="widget-container-full">
+                        <canvas id="line-chart"></canvas>
+                    </div>
                 </div>
 
-                <div class="large-chart-container" style="position: relative;">
-                    <canvas id="line-chart"></canvas>
+                <div class="daily-bar">
+                    <!-- <h3>Daily Traffic Averages</h3> -->
+                    <div class="widget-container-half">
+                        <canvas id="bar-chart"></canvas>
+                    </div>
                 </div>
-            </section>
-
-            <section class="two-columns">
-                <!-- <h3>Daily Traffic Averages</h3> -->
-                <div class="chart-container" style="position: relative;">
-                    <canvas id="bar-chart"></canvas>
-                </div>
-
-                <!-- <h3>Mobile Users</h3> -->
-                <div class="chart-container" style="position: relative;">
-                     <canvas id="donut-chart"></canvas>
+                <div class="mobile-donut">
+                    <!-- <h3>Mobile Users</h3> -->
+                    <div class="widget-container-half" >
+                        <canvas id="donut-chart"></canvas>
+                    </div>
                 </div>
             </section>
 

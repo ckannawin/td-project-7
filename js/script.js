@@ -1,6 +1,24 @@
 
 // Line Chart
 
+// Traffic Options
+let trafficOptions = {
+    aspectRatio: 2.5,
+    animation: {
+      duration: 0
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+    legend: {
+      display: false
+    }
+  };
+
 var ctx = document.getElementById('line-chart').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create
@@ -18,8 +36,10 @@ var chart = new Chart(ctx, {
     },
 
     // Configuration options go here
-    options: {}
+    options: trafficOptions
 });
+
+
 
 // Bar Chart
 
