@@ -1,7 +1,6 @@
 
 // Line Chart
 
-// Traffic Options
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
