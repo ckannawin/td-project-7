@@ -9,6 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/grid.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;600&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -167,29 +169,31 @@
                 </div>
             </section>
 
-            <section>
+            <section class="social-container">
                 <h3>Social Stats</h3>
-                <div class="social-wrap">
-                    <img src="web_app_dashboard_v3.1/icons/icon-twitter.svg" alt="twitter icon" class="social-icon">
-                    <div>
-                        <p class="social-title">Twitter</p>
-                        <p class="social-count">10,345</p>
+                <div class="social">
+                    <div class="social-wrap">
+                        <img src="web_app_dashboard_v3.1/icons/icon-twitter.svg" alt="twitter icon" class="social-icon">
+                        <div>
+                            <p class="social-title">Twitter</p>
+                            <p class="social-count">10,345</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="social-wrap">
-                    <img src="web_app_dashboard_v3.1/icons/icon-facebook.svg" alt="facebook icon" class="social-icon">
-                    <div>
-                        <p class="social-title">Facebook</p>
-                        <p class="social-count">8,739</p>
+                    <div class="social-wrap">
+                        <img src="web_app_dashboard_v3.1/icons/icon-facebook.svg" alt="facebook icon" class="social-icon">
+                        <div>
+                            <p class="social-title">Facebook</p>
+                            <p class="social-count">8,739</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="social-wrap">
-                    <img src="web_app_dashboard_v3.1/icons/icon-google-plus.svg" alt="google plus icon" class="social-icon">
-                    <div>
-                        <p class="social-title">Google+</p>
-                        <p class="social-count">2,530</p>
+                    <div class="social-wrap">
+                        <img src="web_app_dashboard_v3.1/icons/icon-google-plus.svg" alt="google plus icon" class="social-icon">
+                        <div>
+                            <p class="social-title">Google+</p>
+                            <p class="social-count">2,530</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -197,14 +201,14 @@
             <section class="two-columns">
                 <div class="new-members">
                     <h3>New Members</h3>
-
+                    <div class="feed-container">
                         <div class="members">
                             <img src="web_app_dashboard_v3.1/images/member-1.jpg" alt="member-1" class="profile-pic">
                             <div>
                                 <p>Pamela Beasley</p>
                                 <a href="mailto:pbeasley@gmail.com">pbeasley@gmail.com</a>
                             </div>
-                            <p>11/15/2020</p>
+                                <p class="feed-date">11/15/2020</p>
                         </div>
                         <div class="members">
                             <img src="web_app_dashboard_v3.1/images/member-2.jpg" alt="member-2" class="profile-pic">
@@ -212,7 +216,7 @@
                                 <p>Dwight Schrute</p>
                                 <a href="mailto:dschrute@gmail.com">dschrute@gmail.com</a>
                             </div>
-                            <p>11/16/2020</p>
+                            <p class="feed-date">11/16/2020</p>
                         </div>
                         <div class="members">
                             <img src="web_app_dashboard_v3.1/images/member-3.jpg" alt="member-3" class="profile-pic">
@@ -220,77 +224,90 @@
                                 <p>Angela Martin</p>
                                 <a href="mailto:amartin@gmail.com">amartin@gmail.com</a>
                             </div>
-                            <p>11/18/2020</p>
+                            <p class="feed-date">11/18/2020</p>
                         </div>
-                        <div class="members">
+                        <div class="members final-container">
                             <img src="web_app_dashboard_v3.1/images/member-4.jpg" alt="member-4" class="profile-pic">
                             <div>
                                 <p>Michael Scott</p>
                                 <a href="mailto:mscott@bing.com">pbeasley@bing.com</a>
                             </div>
-                            <p>11/22/2020</p>
+                            <p class="feed-date">11/22/2020</p>
                         </div>
+                    </div>
                 </div>
 
                 <div class="recent-activity">
                     <h3>Recent Activity</h3>
-                    
-                    <div class="activity">
-                        <img src="web_app_dashboard_v3.1/images/member-1.jpg" alt="member-1" class="profile-pic">
-                        <p><strong>Pamela Beasley</strong> Created a new event: Art Show at the College</p>
-                        <p>4 Hours Ago</p>
-                    </div>
-                    <div class="activity">
-                        <img src="web_app_dashboard_v3.1/images/member-2.jpg" alt="member-2" class="profile-pic">
-                        <p><strong>Dwight Schrute</strong> Liked the post "Everything to know about bears, beets, and Battlestar Galatica"</p>
-                        <p>5 Hours Ago</p>
-                    </div>
-                    <div class="activity">
-                        <img src="web_app_dashboard_v3.1/images/member-3.jpg" alt="member-3" class="profile-pic">
-                        <p><strong>Angela Marting</strong> Liked 134 photos from the album "Cats in costumes"</p>
-                        <p>6 Hours Ago</p>
-                    </div>
-                    <div class="activity">
-                        <img src="web_app_dashboard_v3.1/images/member-4.jpg" alt="member-4" class="profile-pic">
-                        <p><strong>Michael Scott</strong> Shared the article "Jokes too Inappropriate for the Workplace"</p>
-                        <p>1 Day Ago</p>
+                    <div class="feed-container">
+                        <div class="activity">
+                            <img src="web_app_dashboard_v3.1/images/member-1.jpg" alt="member-1" class="profile-pic">
+                            <div>
+                                <p><strong>Pamela Beasley</strong> New event: Art Show at the College</p>
+                                <p class="feed-date">4 Hours Ago</p>
+                            </div>
+                            <p>&gt;</p>
+                        </div>
+                        <div class="activity">
+                            <img src="web_app_dashboard_v3.1/images/member-2.jpg" alt="member-2" class="profile-pic">
+                            <div>
+                                <p><strong>Dwight Schrute</strong> Liked "Bears, beets, and Battlestar Galatica"</p>
+                                <p class="feed-date">5 Hours Ago</p>
+                            </div>
+                            <p>&gt;</p>
+                        </div>
+                        <div class="activity">
+                            <img src="web_app_dashboard_v3.1/images/member-3.jpg" alt="member-3" class="profile-pic">
+                            <div>
+                                <p><strong>Angela Marting</strong> Liked 134 photos from the album "Cats in costumes"</p>
+                                <p class="feed-date">6 Hours Ago</p>
+                            </div>
+                            <p>&gt;</p>
+                        </div>
+                        <div class="activity final-container">
+                            <img src="web_app_dashboard_v3.1/images/member-4.jpg" alt="member-4" class="profile-pic">
+                            <div>
+                                <p><strong>Michael Scott</strong> Shared "Jokes too Inappropriate for the Workplace"</p>
+                                <p class="feed-date">1 Day Ago</p>
+                            </div>
+                            <p>&gt;</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section class="two-columns">
-                <div>
+                <div class="message-container">
                     <h3>Message User</h3>
 
                     <form>
-                        <input
-                            type="text"
-                            placeholder="Search for user"
-                            class="search-area"
-                            id="userField"
-                        />
+                        <input type="text" placeholder="Search for user" class="search-area"/>
                        
-                        <textarea
-                            placeholder="Message for user"
-                            class="message-area"
-                            id="messageField"
-                        ></textarea>
+                        <textarea placeholder="Message for user" class="message-area"></textarea>
+                        
                         <button class="send-btn">Send</button>
                 </div>
 
-                <div>
+                <div class="settings-container">
                     <h3>Settings</h3>
-                    <div>
+
+                    <div class="toggle-container">
                         <p>Send Email Notification</p>
-
+                        <label class="toggle">
+                            <input type="checkbox" class="email-toggle">
+                            <span class="slider"></span>
+                          </label>
                     </div>
 
-                    <div>
+                    <div class="toggle-container">
                         <p>Set Profile to Public</p>
-
+                        <label class="toggle">
+                            <input type="checkbox" class="profile-toggle">
+                            <span class="slider"></span>
+                          </label>
                     </div>
 
-                    <select class="form=field" id="timezone">
+                    <select class="timezone-select">
                         <option disabled selected>Select a Timezone</option>
                         <option>Eastern</option>
                         <option>Central</option>
@@ -298,7 +315,7 @@
                         <option>Pacific</option>
                     </select>
 
-                    <div class="settings-button">
+                    <div class="button-container">
                         <button class="save-btn">Save</button>
                         <button class="cancel-btn">Cancel</button>
                     </div>
