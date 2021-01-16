@@ -55,9 +55,26 @@ textarea {
     display: inline-block;
     margin: auto 5px;
 }
+
+/* notification bell */
+
 .bell-icon {
     margin-right: 10px;
+    margin-top: 32px;
+    position: relative;
+    display:inline-block;
 }
+.dot {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    top: 35px;
+    right: 215px;
+    border-radius: 50%;
+    background: rgba(255, 99, 132, 1);
+}
+
 
 .profile-pic {
     width: 50px;
@@ -204,6 +221,8 @@ textarea {
     align-items: center;
 }
 .social-wrap {
+    display: flex;
+    align-items: center;
     background-color: #F5F5F5;
     border: lightgray 1px solid;
     border-radius: 6px;
@@ -256,6 +275,7 @@ textarea {
     width: 100%;
     padding-bottom: 10px;
     margin-bottom: 2.5%;
+    max-width: 600px;
 }
 .final-container {
     border: none;
@@ -295,6 +315,7 @@ textarea {
     border-radius: 5px;
     background: lightgray;
     color: black;
+    max-width: 600px;
 }
 .search-area {
     height: 50px;
@@ -315,6 +336,7 @@ textarea {
     display: flex;
     align-items: center;
     margin-bottom: 1em;
+    max-width: 600px;
 }
 .toggle-container p {
     margin-right: 1.25em;
@@ -355,7 +377,6 @@ textarea {
     -webkit-transition: .4s;
     transition: .4s;
 }
-  
 .slider::after {
     position: absolute;
     content: 'ON';
@@ -372,18 +393,24 @@ textarea {
     transform: translateX(66px);
  }
     
+ /* Timezone Dropdown */ 
+
 .timezone-select {
     width: 100%;
     height: 40px;
     background-color: lightgray;
     border: solid 1px lightgray;
     border-radius: 5px;
-    margin-bottom: 1.25em;
+    margin-bottom: 1em;
 }
+
+/* save/cancel buttons */
+
 .button-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 600px;
 }
 .save-btn,
 .cancel-btn {
@@ -397,6 +424,9 @@ textarea {
     background-color: teal;
     color: white;
 }
+
+
+/* Media Queries */
 
 @media screen and (min-width: 768px) {
 .search-glass {
