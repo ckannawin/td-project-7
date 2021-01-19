@@ -1,6 +1,30 @@
+// Variables
+const bellContainer = document.querySelector('.bell-container');
+const bellDot = document.querySelector('.dot');
+const alertBanner = document.querySelector('.alert-banner');
+const closeAlert = document.querySelector('.close-alert');
+const navButtons = document.querySelectorAll('.main-nav a');
+const trafficCanvas = document.querySelector('#line-chart');
+const trafficSelectors = document.querySelectorAll('.traffic-selector');
 
-// Line Chart
 
+//Notification Bell
+bellContainer.addEventListener('click', (e) => {
+  const target = e.target;
+
+  bellDot.style.display = 'none';
+})
+
+//Notification Alert Remove
+closeAlert.addEventListener('click', (e)=> {
+  const alertTarget = e.target;
+
+  alertBanner.style.display = 'none';
+
+})
+
+// -------------------------------------------------- Line Chart -----------------------------------------------//
+// traffic options
 let trafficOptions = {
     aspectRatio: 2.5,
     animation: {
@@ -18,27 +42,85 @@ let trafficOptions = {
     }
   };
 
-var ctx = document.getElementById('line-chart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
-
-    // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+//--------------------------------------------------- TRAFFIC DATA----------------------------------------------//
+//Monthly Data
+let monthlyTraffic = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
             label: 'Monthly Data',
             backgroundColor: 'rgba(255, 99, 132, .5)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+            data: [2400, 2200, 2500, 2800, 2500, 3100, 2800]
         }]
-    },
+};
+//Weekly Data
+let weeklyTraffic = {
+  labels: ['W1', 'W2', 'W3', 'W4', 'W5'],
+        datasets: [{
+            label: 'Weekly Data',
+            backgroundColor: 'rgba(255, 99, 132, .5)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [300, 400, 500, 450, 350]
+        }]
+};
+//Daily Data
+let dailyTraffic = {
+  labels: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        datasets: [{
+            label: 'Daily Data',
+            backgroundColor: 'rgba(255, 99, 132, .5)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [5, 50, 40, 35, 40, 30, 10]
+        }]
+};
+//Hourly Data
+let hourlyTraffic = {
+  labels: ['9am','10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm',],
+        datasets: [{
+            label: 'Hourly Data',
+            backgroundColor: 'rgba(255, 99, 132, .5)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [2, 3, 3, 12, 15, 10, 12, 8, 3]
+        }]
+};
 
-    // Configuration options go here
+// Create Chart Function (passed data from if to find which label is selected)
+function generateTrafficChart(data) {
+  let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data,
     options: trafficOptions
-});
+  });
+}
+// Load chart on open
+window.addEventListener('DOMContentLoaded', function() {
+  let trafficChart = new Chart(trafficCanvas, {
+    type: 'line',
+    data: monthlyTraffic,
+    options: trafficOptions
+  });
+})
+//Data selectors
+trafficSelectors.forEach(trafficSelectors => {
+  trafficSelectors.addEventListener ('click', e => {
+    let currentSelection = e.target;
+    document.querySelector('.traffic-active').classList.remove('traffic-active');
+    currentSelection.classList.add('traffic-active');
 
-
+    if (currentSelection.textContent === 'Monthly') {
+      generateTrafficChart(monthlyTraffic);
+    }
+    if (currentSelection.textContent === 'Weekly') {
+      generateTrafficChart(weeklyTraffic);
+    }
+    if (currentSelection.textContent === 'Daily') {
+      generateTrafficChart(dailyTraffic);
+    }
+    if (currentSelection.textContent === 'Hourly') {
+      generateTrafficChart(hourlyTraffic);
+    }
+  })
+})
 
 // Bar Chart
 

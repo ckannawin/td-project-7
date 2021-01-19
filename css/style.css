@@ -57,12 +57,18 @@ textarea {
 }
 
 /* notification bell */
-
+.bell-container {
+    position: relative;
+}
 .bell-icon {
     margin-right: 10px;
     margin-top: 32px;
     position: relative;
     display:inline-block;
+    transition: all .5s;
+}
+.bell-icon:hover {
+    transform: rotate(20deg) scale(1.1);
 }
 .dot {
     content: '';
@@ -70,7 +76,7 @@ textarea {
     width: 13px;
     height: 13px;
     top: 35px;
-    right: 215px;
+    right: 10px;
     border-radius: 50%;
     background: rgba(255, 99, 132, 1);
 }
@@ -90,11 +96,29 @@ textarea {
     font-size: 90%;
   }
 
-.main-nav {
+/* Nav */
+
+.nav-container {
     background-color: #004e4e;
 }
-.main-nav svg {
-    margin: 15px 20px;
+.main-nav {
+    background-color: #004e4e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-nav img {
+    width: 2.25rem;
+}
+.main-nav a {
+    padding: 1.1em;
+    margin: 0;
+}
+.main-nav a:active,
+.main-nav a:hover {
+    border-left: 3px solid rgba(255, 99, 132, 1);
+    border-radius: 2px;
 }
 
 /* Dashboard search line */
@@ -130,7 +154,7 @@ textarea {
 .dash-search-area:focus {
     outline: none;
 }
- .dash-search-wrapper {
+.dash-search-wrapper {
     align-items: center;
     height: 50px;
     width: 90%;
@@ -152,7 +176,7 @@ textarea {
     width: 10px;
 }
 
-
+/* Alert Banner */
 .alert-banner {
     background-color: #004e4e;
     margin: 25px auto;
@@ -161,7 +185,14 @@ textarea {
     border-radius: 6px;
     max-width: 1200px;
 }
-
+.close-alert {
+    cursor: pointer;
+    border: none;
+    color: white;
+    background-color: #004e4e;
+    font-size: small;
+    padding: 0;
+}
 .alert-banner p,
 .alert-banner button,
 .traffic h3,
@@ -173,14 +204,8 @@ textarea {
     width: 95%;
     padding-left: 10px;
 }
-.alert-banner button{
-  border: none;
-  color: white;
-  background-color: #004e4e;
-  font-size: small;
-  padding: 0;
-}
 
+/* Traffic Chart */
 .traffic-title {
     width: 95%;
     margin: 0 auto 0 25px;
@@ -192,8 +217,17 @@ textarea {
     padding: 0;
     margin-left: auto;
 }
-.traffic-list li {
+.traffic-selector {
     margin: 10px;
+    cursor: pointer;
+}
+.traffic-active {
+    background-color: teal;
+    border-radius: 15px;
+    color: white;
+    padding: 5px 15px;
+    transition: background-color .5s ease-in-out;
+    transition: color .5s;
 }
 
 
@@ -209,7 +243,7 @@ textarea {
 .recent-activity {
     border: lightgray 1px solid;
 }
-
+/* Social Styles */
 .social-wrap,
 .social-wrap img,
 .social-wrap div {
@@ -292,6 +326,10 @@ textarea {
 .activity > p {
     margin-left: auto;
     font-size: .9em;
+}
+.email {
+    text-decoration: none;
+    color: teal;
 }
 
 .message-container,
