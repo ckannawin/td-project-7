@@ -260,7 +260,7 @@
                 <div class="message-container">
                     <h3>Message User</h3>
 
-                    <form>
+                    <form class="form">
                         <input type="text" placeholder="Search for user" class="search-area"/>
                        
                         <textarea placeholder="Message for user" class="message-area"></textarea>
@@ -272,12 +272,13 @@
                 <div class="settings-container">
                     <h3>Settings</h3>
 
+                    <div class="settings-form">
                     <div class="toggle-container">
                         <p>Send Email Notification</p>
                         <label class="toggle">
                             <input type="checkbox" class="email-toggle">
                             <span class="slider"></span>
-                          </label>
+                        </label>
                     </div>
 
                     <div class="toggle-container">
@@ -285,20 +286,22 @@
                         <label class="toggle">
                             <input type="checkbox" class="profile-toggle">
                             <span class="slider"></span>
-                          </label>
+                        </label>
                     </div>
 
-                    <select class="timezone-select">
-                        <option disabled selected>Select a Timezone</option>
-                        <option>Eastern</option>
-                        <option>Central</option>
-                        <option>Mountain</option>
-                        <option>Pacific</option>
-                    </select>
+                     
+                        <select class="timezone-select">
+                            <option disabled selected>Select a Timezone</option>
+                            <option>Eastern</option>
+                            <option>Central</option>
+                            <option>Mountain</option>
+                            <option>Pacific</option>
+                        </select>
 
-                    <div class="button-container">
-                        <button class="save-btn">Save</button>
-                        <button class="cancel-btn">Cancel</button>
+                        <div class="button-container">
+                            <button class="save-btn">Save</button>
+                            <button class="cancel-btn">Cancel</button>
+                        </div>
                     </div>
                 </div>
             </section>
