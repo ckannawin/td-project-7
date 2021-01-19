@@ -229,6 +229,9 @@ textarea {
     transition: background-color .5s ease-in-out;
     transition: color .5s;
 }
+#line-chart {
+    transition: background-color 2s;
+}
 
 
 .widget-container-full {
@@ -242,6 +245,10 @@ textarea {
 .new-members,
 .recent-activity {
     border: lightgray 1px solid;
+}
+.daily-bar h3,
+.mobile-donut h3 {
+    margin-left: 25px;
 }
 /* Social Styles */
 .social-wrap,
@@ -332,6 +339,7 @@ textarea {
     color: teal;
 }
 
+/* Message Styles */
 .message-container,
 .settings-container {
     padding: 1em;

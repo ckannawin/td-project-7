@@ -6,6 +6,9 @@ const closeAlert = document.querySelector('.close-alert');
 const navButtons = document.querySelectorAll('.main-nav a');
 const trafficCanvas = document.querySelector('#line-chart');
 const trafficSelectors = document.querySelectorAll('.traffic-selector');
+const sendButton = document.querySelector('.send-btn');
+const userInput = document.querySelector('.search-area');
+const messageInput = document.querySelector('.message-area');
 
 
 //Notification Bell
@@ -133,7 +136,7 @@ var chart = new Chart(ctx, {
     data: {
         labels: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'],
         datasets: [{
-            label: 'Daily Traffic',
+            label: 'Traffic Avg',
             backgroundColor: '#66b2b2',
             borderColor: '#66b2b2',
             data: [55, 155, 205, 125, 250, 225, 35]
@@ -169,3 +172,17 @@ var chart = new Chart(ctx, {
         }
     }
 });
+
+//Send Message Functionality
+
+sendButton.addEventListener ('click', e => {
+
+  if (messageInput.value === '' || userInput.value === '') {
+    alert('Please ensure user is entered and message is not empty');
+  }
+  else {
+    alert('Message sent!');
+  }
+  
+
+})
